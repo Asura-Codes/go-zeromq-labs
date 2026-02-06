@@ -2,9 +2,8 @@
 
 [![Go Reference](https://pkg.go.dev/badge/github.com/go-zeromq/zmq4.svg)](https://pkg.go.dev/github.com/go-zeromq/zmq4)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Status: Active](https://img.shields.io/badge/Status-Active-success.svg)]()
 
-A comprehensive curriculum of **22 standalone laboratories** exploring advanced distributed system patterns. This project demonstrates how to build resilient, high-performance architectures using **Go** and **ZeroMQ**.
+A comprehensive curriculum of **24 standalone laboratories** exploring advanced distributed system patterns. This project demonstrates how to build resilient, high-performance architectures using **Go** and **ZeroMQ**.
 
 > **Note:** This curriculum and the implementation code were developed with the assistance of **Google Gemini**, serving as an AI pair programmer and architectural consultant.
 
@@ -77,27 +76,10 @@ go run ./cmd/dashboard
 | **18** | **4K Video Stream** (Zero-Copy) | High-throughput binary data, Memory pooling | [Summary](./lab18/SUMMARY.md) |
 | **19** | **Native Ironhouse** (CGO CurveZMQ) | Native C bindings, Transport Encryption | [Summary](./lab19/SUMMARY.md) |
 | **20** | **Distributed Tracing** (Spy Pattern) | Asynchronous Telemetry, Side-channel logging | [Summary](./lab20/SUMMARY.md) |
-| **21** | **Distributed Lock Manager** (Quorum) | Client-side Quorum, Distributed Mutex | [Summary](./lab21/SUMMARY.md) |
-| **22** | **Federated Bridge** (Zone Bridging) | WAN Optimization, Subscription Forwarding | [Summary](./lab22/SUMMARY.md) |
+| **21** | **Distributed Lock Manager** (Chubby) | Lease Management, Heartbeating | [Summary](./lab21/SUMMARY.md) |
+| **22** | **High-Observability Broker** (Proxy) | Manual message pumping, Traffic observability | [Summary](./lab22/SUMMARY.md) |
+| **23** | **Cluster Gossip** (PUB-SUB) | Peer discovery, Decentralized state sharing | [Summary](./lab23/SUMMARY.md) |
+| **24** | **Secure Beaconing** (UDP + REQ) | UDP discovery, Zero-config networking | [Summary](./lab24/SUMMARY.md) |
 
-## 📂 Project Structure
-
-```text
-/
-├── lab01/             # Lab Directory
-│   ├── cmd/           # Executables (Main packages)
-│   ├── internal/      # Private library code
-│   ├── go.mod         # Go Module definition
-│   ├── run.ps1        # Orchestration script
-│   └── SUMMARY.md     # Documentation
-├── .vscode/           # Editor configuration
-└── README.md          # This file
-```
-
-## 🤝 Contributing
-
-Contributions are welcome! Please ensure any Pull Requests adhere to the existing architectural patterns and include a corresponding `SUMMARY.md` update.
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+---
+*Created with the assistance of the Gemini CLI.*
