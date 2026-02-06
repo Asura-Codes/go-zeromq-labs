@@ -1,0 +1,180 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Lab 01: Run",
+            "type": "shell",
+            "command": "./lab01/run.ps1",
+            "problemMatcher": [],
+            "group": { "kind": "build" }
+        },
+        {
+            "label": "Lab 02: Run",
+            "type": "shell",
+            "command": "./lab02/run.ps1",
+            "problemMatcher": [],
+            "group": { "kind": "build" }
+        },
+        {
+            "label": "Lab 03: Run",
+            "type": "shell",
+            "command": "./lab03/run.ps1",
+            "problemMatcher": [],
+            "group": { "kind": "build" }
+        },
+        {
+            "label": "Lab 04: Run",
+            "type": "shell",
+            "command": "./lab04/run.ps1",
+            "problemMatcher": [],
+            "group": { "kind": "build" }
+        },
+        {
+            "label": "Lab 05: Run",
+            "type": "shell",
+            "command": "./lab05/run.ps1",
+            "problemMatcher": [],
+            "group": { "kind": "build" }
+        },
+        {
+            "label": "Lab 06: Run",
+            "type": "shell",
+            "command": "./lab06/run.ps1",
+            "problemMatcher": [],
+            "group": { "kind": "build" }
+        },
+        {
+            "label": "Lab 07: Run",
+            "type": "shell",
+            "command": "./lab07/run.ps1",
+            "problemMatcher": [],
+            "group": { "kind": "build" }
+        },
+        {
+            "label": "Lab 08: Run",
+            "type": "shell",
+            "command": "./lab08/run.ps1",
+            "problemMatcher": [],
+            "group": { "kind": "build" }
+        },
+        {
+            "label": "Lab 09: Run",
+            "type": "shell",
+            "command": "./lab09/run.ps1",
+            "problemMatcher": [],
+            "group": { "kind": "build" }
+        },
+        {
+            "label": "Lab 10: Run",
+            "type": "shell",
+            "command": "./lab10/run.ps1",
+            "problemMatcher": [],
+            "group": { "kind": "build" }
+        },
+        {
+            "label": "Lab 11: Run",
+            "type": "shell",
+            "command": "./lab11/run.ps1",
+            "problemMatcher": [],
+            "group": { "kind": "build" }
+        },
+        {
+            "label": "Lab 12: Run",
+            "type": "shell",
+            "command": "./lab12/run.ps1",
+            "problemMatcher": [],
+            "group": { "kind": "build" }
+        },
+        {
+            "label": "Lab 13: Run",
+            "type": "shell",
+            "command": "./lab13/run.ps1",
+            "problemMatcher": [],
+            "group": { "kind": "build" }
+        },
+        {
+            "label": "Lab 14: Run",
+            "type": "shell",
+            "command": "./lab14/run.ps1",
+            "problemMatcher": [],
+            "group": { "kind": "build" }
+        },
+        {
+            "label": "Lab 15: Run",
+            "type": "shell",
+            "command": "./lab15/run.ps1",
+            "problemMatcher": [],
+            "group": { "kind": "build" }
+        },
+        {
+            "label": "Lab 16: Run",
+            "type": "shell",
+            "command": "./lab16/run.ps1",
+            "problemMatcher": [],
+            "group": { "kind": "build" }
+        },
+        {
+            "label": "Lab 17: Run",
+            "type": "shell",
+            "command": "./lab17/run.ps1",
+            "problemMatcher": [],
+            "group": { "kind": "build" }
+        },
+        {
+            "label": "Lab 18: Run",
+            "type": "shell",
+            "command": "./lab18/run.ps1",
+            "problemMatcher": [],
+            "group": { "kind": "build" }
+        },
+        {
+            "label": "Lab 19: Run",
+            "type": "shell",
+            "command": "./lab19/run.ps1",
+            "problemMatcher": [],
+            "group": { "kind": "build" }
+        },
+        {
+            "label": "Lab 20: Run",
+            "type": "shell",
+            "command": "./lab20/run.ps1",
+            "problemMatcher": [],
+            "group": { "kind": "build" }
+        },
+        {
+            "label": "Lab 21: Run",
+            "type": "shell",
+            "command": "./lab21/run.ps1",
+            "problemMatcher": [],
+            "group": { "kind": "build" }
+        },
+        {
+            "label": "Lab 22: Run",
+            "type": "shell",
+            "command": "./lab22/run.ps1",
+            "problemMatcher": [],
+            "group": { "kind": "build" }
+        },
+        {
+            "label": "Lab 23: Run",
+            "type": "shell",
+            "command": "./lab23/run.ps1",
+            "problemMatcher": [],
+            "group": { "kind": "build" }
+        },
+        {
+            "label": "Lab 24: Run",
+            "type": "shell",
+            "command": "./lab24/run.ps1",
+            "problemMatcher": [],
+            "group": { "kind": "build" }
+        },
+        {
+            "label": "Cleanup All Labs",
+            "type": "shell",
+            "command": "Get-Process monitor_agent, dashboard, log_collector, log_parser, storage_writer, admin_cli, node_agent, telemetry_source, lvc_broker, analyst_terminal, audit_gateway, archival_worker, audit_client, upload_service, scanner_broker, av_engine, policy_master, firewall_node, field_device, central_receiver, c2_server, secure_agent, keygen, alert_logger, anomaly_detector, intel_provider, soc_processor, ha_broker_primary, ha_broker_backup, client_app, majordomo_broker, echo_worker, client_requester, titanic_broker, storage_service, patient_client, mock_majordomo, dht_node, client_put_get, mr_master, map_worker, reduce_worker, zmq_bridge, telemetry_producer, consensus_node, client_proposer, camera_feed, analytics_engine, trace_collector, monitored_service, lock_server, lock_client, monitored_broker, gossip_node, secure_device, network_scanner -ErrorAction SilentlyContinue | Stop-Process -Force",
+            "problemMatcher": [],
+            "group": { "kind": "build" }
+        }
+    ]
+}

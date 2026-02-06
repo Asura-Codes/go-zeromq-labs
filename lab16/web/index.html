@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZeroMQ Real-Time Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #f8f9fa; }
+        .severity-CRITICAL { color: #dc3545; font-weight: bold; }
+        .severity-WARNING { color: #ffc107; font-weight: bold; }
+        .severity-INFO { color: #0dcaf0; }
+        #log-container { max-height: 500px; overflow-y: auto; }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4">Live Security Telemetry</h1>
+        <div class="card">
+            <div class="card-header bg-dark text-white d-flex justify-content-between">
+                <span>Event Stream</span>
+                <span id="status" class="badge bg-danger">Disconnected</span>
+            </div>
+            <div class="card-body" id="log-container">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Timestamp</th>
+                            <th>Type</th>
+                            <th>Severity</th>
+                            <th>Message</th>
+                        </tr>
+                    </thead>
+                    <tbody id="event-log"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const logTable = document.getElementById('event-log');
+        const statusBadge = document.getElementById('status');
+        const ws = new WebSocket('ws://' + window.location.host + '/ws');
+
+        ws.onopen = () => {
+            statusBadge.innerText = 'Connected';
+            statusBadge.className = 'badge bg-success';
+        };
+
+        ws.onclose = () => {
+            statusBadge.innerText = 'Disconnected';
+            statusBadge.className = 'badge bg-danger';
+        };
+
+        ws.onmessage = (event) => {
+            const data = JSON.parse(event.data);
+            const row = document.createElement('tr');
+            
+            row.innerHTML = `
+                <td><small>${new Date(data.timestamp).toLocaleTimeString()}</small></td>
+                <td><span class="badge bg-secondary">${data.type}</span></td>
+                <td><span class="severity-${data.severity}">${data.severity}</span></td>
+                <td>${data.message}</td>
+            `;
+            
+            logTable.insertBefore(row, logTable.firstChild);
+            
+            // Limit rows
+            if (logTable.children.length > 50) {
+                logTable.removeChild(logTable.lastChild);
+            }
+        };
+    </script>
+</body>
+</html>

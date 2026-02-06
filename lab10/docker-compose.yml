@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  intel-provider:
+    build:
+      context: .
+      args:
+        SERVICE_NAME: intel_provider
+    environment:
+      - INTEL_PUB_ADDR=tcp://*:5555
+
+  anomaly-detector:
+    build:
+      context: .
+      args:
+        SERVICE_NAME: anomaly_detector
+    environment:
+      - ANOMALY_REP_ADDR=tcp://*:5556
+
+  alert-logger:
+    build:
+      context: .
+      args:
+        SERVICE_NAME: alert_logger
+    environment:
+      - ALERT_PULL_ADDR=tcp://*:5557
+
+  soc-processor:
+    build:
+      context: .
+      args:
+        SERVICE_NAME: soc_processor
+    depends_on:
+      - intel-provider
+      - anomaly-detector
+      - alert-logger
+    environment:
+      - INTEL_SUB_ADDR=tcp://intel-provider:5555
+      - ANOMALY_REQ_ADDR=tcp://anomaly-detector:5556
+      - ALERT_PUSH_ADDR=tcp://alert-logger:5557
