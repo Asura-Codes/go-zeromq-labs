@@ -21,7 +21,7 @@ This repository moves beyond basic "Hello World" examples to tackle real-world s
 ## 🛠️ Prerequisites
 
 *   **Go 1.22+**
-*   **ZeroMQ (libzmq)** (Required only for Lab 19 and Lab 16 CGO bindings; most labs use pure-Go `zmq4`)
+*   **ZeroMQ (libzmq)** (Required only for Lab 19 CGO bindings; most labs use pure-Go `zmq4`)
 *   **Docker & Docker Compose** (For orchestration labs like Lab 10)
 *   **PowerShell** (For automated build/run scripts on Windows)
 
