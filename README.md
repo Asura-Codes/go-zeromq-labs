@@ -1,3 +1,5 @@
+
+
 # Advanced Distributed Systems with ZeroMQ and Go
 
 [![Go Reference](https://pkg.go.dev/badge/github.com/go-zeromq/zmq4.svg)](https://pkg.go.dev/github.com/go-zeromq/zmq4)
@@ -28,6 +30,15 @@ This repository moves beyond basic "Hello World" examples to tackle real-world s
 ## 🚀 Getting Started
 
 Each lab is an independent module. You can run them individually or use the provided orchestration scripts.
+
+### Module Initialization
+Before running a lab for the first time, initialize the Go module and fetch dependencies:
+```powershell
+cd lab01
+go mod init gemini-zeromq-labs/lab01
+go get github.com/go-zeromq/zmq4
+```
+*(Note: Lab 19 requires `github.com/pebbe/zmq4` and native CGO bindings instead.)*
 
 ### Running a Lab (Automated)
 Most labs include a `run.ps1` script that builds and launches all necessary components (Publisher, Subscriber, Broker, etc.) in the correct order.
